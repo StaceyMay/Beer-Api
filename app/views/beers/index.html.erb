@@ -1,0 +1,9 @@
+<% @beers.each do |beer|%>
+  <div>
+    <h2>Name: <i><%= beer.name %></i></h2>
+    <p>Alcohol Content: <%= beer.alcohol_content%></p>
+    <p> Style: <%= beer.style%></p>
+    <p> Malt Type: <%= beer.malt%></p>
+    <p> Hop Type: <%= beer.hop%></p>
+  </div>
+<% end -%>
