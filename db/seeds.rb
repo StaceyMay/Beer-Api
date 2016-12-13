@@ -12,3 +12,13 @@
   beer = Beer.new(name: Faker::Beer.name, alcohol_content: Faker::Beer.alcohol, style: Faker::Beer.style, malt: Faker::Beer.malts, hop: Faker::Beer.hop)
   beer.save
 end
+
+200.times do
+  name = Faker::StarWars.character
+  address = Faker::Address.street_address
+  address_2 = Faker::Address.state
+  email = Faker::Internet.email
+  beer_id = rand(0..100)
+
+  Drinker.create(name: name, address: address, address_2: address_2, email: email, beer_id: beer_id)
+end
